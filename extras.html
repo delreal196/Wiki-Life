@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+    </head>
+    <body style="background-color:#544bba;">
+        <a href="index.html"><h2>Back</h2></a>
+    <center>
+        <a href="index.html"><img src="img/homelogo.png" id="pagelogo"></a>
+        <div id="back">
+        <h3>How tall are you really?</h3>
+        <br>
+        <table id="input">
+            <tr>
+                <td><h4>Input your height in feet.</h4> </td>
+            </tr>
+            <tr>
+                <td><input id="value" type="number" oninput="tempconverter(this.value)" onchange="tempconverter(this.value)"></td>
+            </tr>
+        </table>
+        
+        
+        <p><span id="outputCelcius"></span></p>
+        <br>
+        
+        </div>
+    </center>
+        <script>
+        function tempconverter(valNum) {
+        valNum = parseFloat(valNum);
+        var meters = valNum / 3.281;
+        var m = meters.toFixed(2);
+        
+        var whale = 29.9/meters;
+        var w = whale.toFixed(2);
+        
+        var sauroposeidon = 13/meters;
+        var s = sauroposeidon.toFixed(2);
+        
+        var giraff = 5.5/meters;
+        var g = giraff.toFixed(2);
+        
+        var deep = 11033.76/meters;
+        var d = deep.toFixed(2);
+        
+        var inches = valNum * 12;
+        
+        
+        var centemeters = valNum * 30.48;
+        var c = centemeters.toFixed(2);
+        
+        document.getElementById("outputCelcius").innerHTML= "Height in inches: " + inches + "<br>" +
+                "Height in centemeters: " + c + "<br>" +
+                "It would take " + "<b>" + g + "</b>" + " of you to reach the height of a Giraff." + "<br>" +
+                "It would take " + "<b>" + s + "</b>" + " of you to reach the height of a Sauroposeidon." + "<br>" +
+                "It would take " + "<b>" + w + "</b>" + " of you to reach the length of a Blue Whale." + "<br>" +
+                "It would take " + "<b>" + d + "</b>" + " of you to reach the bottom of the Challenger Deep, the deepest part of the ocean!" + "<br>";
+        
+        }
+       
+        </script>
+    </body>
+</html>
+
